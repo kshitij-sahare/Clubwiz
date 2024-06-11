@@ -1,0 +1,51 @@
+
+.container {
+    position: fixed;
+    overflow: hidden;top: 0;
+    width: 100%;
+    height: 100%;
+    /* background: url('../../assets/background-image-2.jpg') no-repeat center center/cover; */
+}
+.main-content {
+    position: absolute;
+    top: 500px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.main-title {
+    top: 20%;
+    position: relative;
+    font-size: 4.5rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+}
+span{
+    color: #d0afff;
+
+}
+.subtitle {
+    font-size: 2rem;
+    margin-top: 50%;
+    text-align: center;
+    text-shadow: 1px 1px 2px #000;
+}
+.quote-container {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+}
+.quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    max-width: 90%;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+.quote-mark {
+    color: #d0afff;
+    font-size: 5rem;
+    vertical-align: middle;
+}

@@ -1,0 +1,62 @@
+<div class="events-container">
+<div class="inner-container">
+
+
+
+
+    <!-- <a href="https://www.google.com/maps/dir//Infosys Limited, Mysore">Take me there!</a>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d21056742.211671695!2d-97.15369!3d49.891235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s14735+32A+AVE+Surrey+V4P+1Z8+bc!5e0!3m2!1sen!2sca!4v1424618801986" width="600" height="450" frameborder="0" style="border:0"></iframe> -->
+  
+    <header>
+        <div class="search-bar">
+          <input type="text" [(ngModel)]="searchText" placeholder="Search">
+        </div>
+      </header>
+      
+      <div class="event-list">
+        <div *ngFor="let event of events | search:searchText" class="event-card" (click)="navigate(event.id)">
+          <img [src]="event.img" alt="{{ event.name }}">
+          <div class="event-info">
+            <h3>{{ event.name }}</h3>
+            <p>{{ event.location }}</p>
+            <p>{{ event.time }}</p>
+          </div>
+        </div>
+      </div>
+      
+      <button class="add-button" (click)="openAddModal()">+</button>
+  
+</div>    
+</div>
+  
+  <div *ngIf="isAddModalOpen" class="modal">
+    <div class="modal-content">
+      <h2>Add Event</h2>
+      <form (ngSubmit)="addEvent()">
+        <label>
+          Event Name:
+          <input type="text" [(ngModel)]="newEvent.name" name="name" required>
+        </label>
+        <label>
+          Location:
+          <input type="text" [(ngModel)]="newEvent.location" name="location" required>
+        </label>
+        <label>
+          Image URL:
+          <input type="text" [(ngModel)]="newEvent.img" name="img" required>
+        </label>
+        <label>
+            Add Image:
+            <input type="file" (change)="onFileSelected($event)" />
+        </label>
+        <label>
+          Time:
+          <input type="text" [(ngModel)]="newEvent.time" name="time" required>
+        </label>
+        <button type="submit">Add</button>
+        <button type="button" (click)="closeAddModal()">Cancel</button>
+      </form>
+    </div>
+  </div>
+  

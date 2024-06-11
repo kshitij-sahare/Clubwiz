@@ -1,0 +1,206 @@
+{
+  "users": [
+    {
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "password": "password123",
+      "isAdmin": true,
+      "id": "86ab"
+    },
+    {
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "password": "password123",
+      "isAdmin": false,
+      "id": "cc9a"
+    },
+    {
+      "name": "Alice Johnson",
+      "email": "alice.johnson@example.com",
+      "password": "password123",
+      "isAdmin": false,
+      "id": "1664"
+    },
+    {
+      "name": "Bob Brown",
+      "email": "bob.brown@example.com",
+      "password": "password123",
+      "isAdmin": false,
+      "id": "125f"
+    },
+    {
+      "name": "Charlie Davis",
+      "email": "charlie.davis@example.com",
+      "password": "password123",
+      "isAdmin": false,
+      "id": "a639"
+    },
+    {
+      "id": "b61b",
+      "email": "kshitijsahare1@gmail.com",
+      "password": "12345",
+      "phoneNo": "",
+      "isAdmin": false
+    },
+    {
+      "id": "6d7d",
+      "email": "kshitijsahare1@gmail.com",
+      "password": "Kartik@123",
+      "isAdmin": false
+    },
+    {
+      "id": "3e15",
+      "userName": "Kartik",
+      "email": "Jane.smith@example.com",
+      "password": "qwertyui",
+      "isAdmin": false
+    }
+  ],
+  "events": [
+    {
+      "eventId": 1,
+      "title": "DABO",
+      "rating": 4.2,
+      "images": [
+        {
+          "src": "./../../assets/background-Image.jpg",
+          "alt": "Event 1"
+        },
+        {
+          "src": "./../../assets/background-Image-2.jpg",
+          "alt": "Event 2"
+        },
+        {
+          "src": "./../../assets/background-Image.jpg",
+          "alt": "Event 3"
+        }
+      ],
+      "coupleFee": "$50 per couple",
+      "stagFee": "$30 per person",
+      "eventTitle": "Bollywood Night",
+      "eventSubtitle": "Performing Artist - Nucleya",
+      "specialOffer": "2+1 on IFML drinks",
+      "capacity": "200 pax capacity",
+      "parking": "Dedicated parking Space",
+      "location": "6, New Manish Nagar, Somalwada, Nagpur 440025",
+      "iframeLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119065.02905830946!2d78.9901080712679!3d21.161065901903683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0a5a31faf13%3A0x19b37d06d0bb3e2b!2sNagpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1717750853373!5m2!1sen!2sin",
+      "id": "75b9"
+    },
+    {
+      "eventId": 2,
+      "title": "Club Infinity",
+      "rating": 4.5,
+      "images": [
+        {
+          "src": "./../../assets/background-Image-4.jpg",
+          "alt": "Event 4"
+        },
+        {
+          "src": "./../../assets/background-Image-5.jpg",
+          "alt": "Event 5"
+        },
+        {
+          "src": "./../../assets/background-Image-6.jpg",
+          "alt": "Event 6"
+        }
+      ],
+      "coupleFee": "$60 per couple",
+      "stagFee": "$35 per person",
+      "eventTitle": "EDM Night",
+      "eventSubtitle": "Performing Artist - DJ Snake",
+      "specialOffer": "Free entry for ladies before 10 PM",
+      "capacity": "300 pax capacity",
+      "parking": "Valet parking available",
+      "location": "10, City Center, Nagpur 440010",
+      "iframeLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119065.02905830946!2d78.9901080712679!3d21.161065901903683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0a5a31faf13%3A0x19b37d06d0bb3e2b!2sNagpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1717750853373!5m2!1sen!2sin",
+      "id": "b0d2"
+    },
+    {
+      "eventId": 3,
+      "title": "The Night Club",
+      "rating": 4,
+      "images": [
+        {
+          "src": "./../../assets/background-Image-7.jpg",
+          "alt": "Event 7"
+        },
+        {
+          "src": "./../../assets/background-Image-8.jpg",
+          "alt": "Event 8"
+        },
+        {
+          "src": "./../../assets/background-Image-9.jpg",
+          "alt": "Event 9"
+        }
+      ],
+      "coupleFee": "$55 per couple",
+      "stagFee": "$40 per person",
+      "eventTitle": "Retro Night",
+      "eventSubtitle": "Performing Artist - Retro Kings",
+      "specialOffer": "Buy 1 Get 1 Free on select drinks",
+      "capacity": "250 pax capacity",
+      "parking": "Street parking available",
+      "location": "15, Old Town, Nagpur 440011",
+      "iframeLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119065.02905830946!2d78.9901080712679!3d21.161065901903683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0a5a31faf13%3A0x19b37d06d0bb3e2b!2sNagpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1717750853373!5m2!1sen!2sin",
+      "id": "6309"
+    },
+    {
+      "eventId": 4,
+      "title": "Sky Lounge",
+      "rating": 4.8,
+      "images": [
+        {
+          "src": "./../../assets/background-Image-10.jpg",
+          "alt": "Event 10"
+        },
+        {
+          "src": "./../../assets/background-Image-11.jpg",
+          "alt": "Event 11"
+        },
+        {
+          "src": "./../../assets/background-Image-12.jpg",
+          "alt": "Event 12"
+        }
+      ],
+      "coupleFee": "$70 per couple",
+      "stagFee": "$45 per person",
+      "eventTitle": "Hip Hop Night",
+      "eventSubtitle": "Performing Artist - Travis Scott",
+      "specialOffer": "Ladies night - Free drinks for ladies till 11 PM",
+      "capacity": "350 pax capacity",
+      "parking": "Underground parking available",
+      "location": "20, Central Plaza, Nagpur 440012",
+      "iframeLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119065.02905830946!2d78.9901080712679!3d21.161065901903683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0a5a31faf13%3A0x19b37d06d0bb3e2b!2sNagpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1717750853373!5m2!1sen!2sin",
+      "id": "cd27"
+    },
+    {
+      "eventId": 5,
+      "title": "Party Hub",
+      "rating": 4.1,
+      "images": [
+        {
+          "src": "./../../assets/background-Image-13.jpg",
+          "alt": "Event 13"
+        },
+        {
+          "src": "./../../assets/background-Image-14.jpg",
+          "alt": "Event 14"
+        },
+        {
+          "src": "./../../assets/background-Image-15.jpg",
+          "alt": "Event 15"
+        }
+      ],
+      "coupleFee": "$50 per couple",
+      "stagFee": "$35 per person",
+      "eventTitle": "Pop Night",
+      "eventSubtitle": "Performing Artist - Ariana Grande",
+      "specialOffer": "Happy hour from 6 PM to 8 PM",
+      "capacity": "200 pax capacity",
+      "parking": "Parking available",
+      "location": "25, East End, Nagpur 440013",
+      "iframeLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d",
+      "id": "ce61"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+<!-- navbar.component.html -->
+<nav class="navbar">
+    <div class="container-fluid" >
+      <div class="navbar-header" >
+        <button (click)="toggleNavbar()" *ngIf="!isNavbarOpen">☰</button>
+        <button (click)="toggleNavbar()" *ngIf="isNavbarOpen">X</button>
+      </div>
+      <div class="collapse navbar-collapse" [class.show]="isNavbarOpen" id="navbarTogglerDemo01">
+        <ul class="navbar-links">
+          <li><a (click)="toggleNavbar()" routerLink="/home">CLUBWIZ</a></li>
+          <li><a (click)="closeNavbar()" routerLink="/blogs">Blogs</a></li>
+          <li><a (click)="closeNavbar()" routerLink="/aboutUs">About Us</a></li>
+          <li><a (click)="closeNavbar()" routerLink="/contactUs">Contact Us</a></li>
+          <li><a (click)="closeNavbar()" *ngIf="!loggedIn" routerLink="/auth/login">Login</a></li>
+          <li><a (click)="closeNavbar()" *ngIf="!loggedIn" routerLink="/auth/register">Register</a></li>
+          <ng-container *ngIf="loggedIn">
+            <li><a (click)="logout(); closeNavbar()">Logout</a></li>
+          </ng-container>
+        </ul>
+      </div>
+    </div>
+</nav>
+  

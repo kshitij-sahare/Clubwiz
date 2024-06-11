@@ -1,0 +1,137 @@
+<div class="event-list-container">
+    <header class="header">
+        <div class="back-button" (click)="goToAllEvents()">&lt;</div>
+    </header>
+    <div id="title-Container">
+        <div class="title">{{ eventData.title }}</div>
+        <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="score">{{ eventData.rating }}</span>
+        </div>
+    </div>
+    <div class="slider-container">
+        <div class="slider-wrapper" id="slider-wrapper">
+            <img class="image" *ngFor="let image of eventData.images" [src]="image.src" [alt]="image.alt">
+        </div>
+        <button class="slider-btn prev" (click)="prevSlide()">❮</button>
+        <button class="slider-btn next" (click)="nextSlide()">❯</button>
+    </div>
+    <div class="scroll mt-4">
+        <button class="book-button" (click)="bookTable()">BOOK A TABLE</button>
+        <div class="fees-section">
+            <div class="fee-type" (click)="toggleCoupleFee()">
+                Couple Fee
+                <div *ngIf="isCoupleFeeExpanded" class="fee-details">
+                    <p>{{ eventData.coupleFee }}</p>
+                    <p>Includes 2 drinks</p>
+                </div>
+            </div>
+            <div class="fee-type" (click)="toggleStagFee()">
+                Stag Fee
+                <div *ngIf="isStagFeeExpanded" class="fee-details">
+                    <p>{{ eventData.stagFee }}</p>
+                    <p>Includes 1 drink</p>
+                </div>
+            </div>
+        </div>
+        <div class="event-details">
+            <div class="detail">
+                <span class="detail-title">{{ eventData.eventTitle }}</span>
+                <span class="detail-subtitle">{{ eventData.eventSubtitle }}</span>
+            </div>
+            <div class="detail">
+                <span class="detail-subtitle"> Special Offer: {{ eventData.specialOffer }}</span>
+            </div>
+            <div class="detail">
+                <span class="detail-subtitle">{{ eventData.capacity }}</span>
+                <span class="detail-subtitle">{{ eventData.parking }}</span>
+            </div>
+            <div class="detail">
+                <span class="detail-subtitle">{{ eventData.location }}</span>
+            </div>
+
+            <div class="detail">
+                <a href='https://www.google.com/maps/dir//{{eventData.location}}'>
+                    <iframe [src]="eventData.iframeLink  | safe" width="100%"></iframe>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Existing content -->
+<div>
+    <button class="edit-button" (click)="openEditModal()">Edit</button>
+</div>
+
+<div *ngIf="isEditModalOpen" class="edit-modal">
+    <div class="modal-content">
+        <h2>Event Details</h2>
+        <form (ngSubmit)="saveEdits()" class="mt-2">
+            <div>
+                <div class="row">
+                    <div *ngFor="let image of eventData.images  let i = index" class="col-4" style="margin-bottom: 3%;">
+                        <img style="height: 100%; width: 100%;" [src]="image.src" [alt]="image.alt"
+                            (click)="deleteImage(i)">
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="modal-scroll mt-3">
+                <label>
+                    <input type="file" (change)="onFileSelected($event)" />
+                </label>
+                
+            <label>
+                Place:
+                <input type="text" [(ngModel)]="editData.title" name="title" />
+            </label>
+            <label>
+                Rating:
+                <input type="text" [(ngModel)]="editData.rating" name="rating" />
+            </label>
+            <label>
+                Event Title:
+                <input type="text" [(ngModel)]="editData.title" name="title" />
+            </label>
+            <label>
+                Event Info:
+                <input type="text" [(ngModel)]="editData.eventSubtitle" name="eventSubtitle" />
+            </label>
+            <label>
+                Couple Fee:
+                <input type="text" [(ngModel)]="editData.coupleFee" name="coupleFee" />
+            </label>
+            <label>
+                Stag Fee:
+                <input type="text" [(ngModel)]="editData.stagFee" name="stagFee" />
+            </label>
+            <label>
+                SpeciaOffer:
+                <input type="text" [(ngModel)]="editData.specialOffer" name="specialOffer" />
+            </label>
+            <label>
+                Capacity:
+                <input type="text" [(ngModel)]="editData.capacity" name="capacity"/>
+            </label>
+            <label>
+                Parking:
+                <input type="text" [(ngModel)]="editData.parking" name="parking"/>
+            </label>
+            <label>
+                Location:
+                <input type="text" [(ngModel)]="editData.location" name="location"/>
+            </label>
+            <label>
+                iframe Link:
+                <input type="text" [(ngModel)]="editData.iframeLink" name="iframeLink"/>
+            </label>
+            
+            </div>
+            <button type="submit">Save</button>
+            <button type="button" (click)="closeEditModal()">Cancel</button>
+        </form>
+    </div>
+</div>

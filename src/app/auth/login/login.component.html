@@ -1,0 +1,35 @@
+<div class="login-container">
+  <div class="login-elements">
+    <h1>Login</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" formControlName="email" placeholder="Email Address">
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" formControlName="password" placeholder="Password">
+      </div>
+      <div class="remember-me">
+        <input type="checkbox" id="remember" formControlName="remember">
+        <label for="remember">Remember me</label>
+        <a>Forgot password?</a>
+      </div>
+      <div class="text text-danger">
+        {{errorMessage}}
+      </div>
+      <button type="submit" class="login-button">Login</button>
+    </form>
+    <div class="social-login">
+      <p>Or login with</p>
+      <button class="social-button google">G</button>
+      <!-- <button class="social-button facebook">f</button> -->
+    </div>
+    <div class="guest-login">
+      <button class="skip-button" routerLink='/home'>Skip Login</button>
+    </div>
+    <div class="signup">
+      <p>Don't have an account? <a routerLink="/auth/register">Signup</a></p>
+    </div>
+  </div>
+</div>
